@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  margin: 100px 100px;
+}
+main {
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px auto;
+}
+.nav {
+  text-align: right;
+  visibility: hidden;
+}
+
+p {
+  font-size: 15px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 55px;
+  align-items: center;
+  color: #eceaee;
+}
+
+li {
+  list-style: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: black;
+  cursor: pointer;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr; /* Two rows with equal height */
+  grid-gap: 5px;
+  margin-bottom: 30px;
+}
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 470px 430px 280px; /* Two rows with equal height */
+}
+.item {
+  padding: 10px;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.item-info p {
+  width: 400px;
+  color: #6d6c71;
+  font-size: 13.9px;
+}
+.item-info button {
+  display: block;
+  margin-top: 30px;
+}
+
+.hero-primary {
+  width: 250px;
+  font-weight: 800;
+  font-size: 37px;
+  text-transform: capitalize;
+}
+.btn {
+  background-color: #f15d51;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.right-side-container {
+  padding: 20px 20px;
+  background-color: black;
+}
+.right-primary {
+  color: #e9ac4b;
+}
+.right-side-secondory {
+  font-weight: 800;
+  color: white;
+  padding-bottom: 10px;
+}
+.right-side-secondory-text {
+  color: #aba9ad;
+  padding-bottom: 30px;
+}
+.bottom-border {
+  border-bottom: 1px solid #aba9ad;
+  margin-bottom: 30px;
+}
+.item-flex {
+  display: flex;
+  gap: 16px;
+  margin-left: 10px;
+}
+.one {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 300px;
+  gap: 20px;
+}
+
+.one p {
+  margin-bottom: 25px;
+}
+
+.image-web {
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.list {
+  width: 500px;
+  display: flow-root;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+.list li {
+  padding: 10px;
+}
+/* Sidebar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fefdf9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+/* .sidenav a:hover {
+  color: black;
+} */
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.menu-icon {
+  visibility: hidden;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* Add these media queries at the end of your CSS */
+
+/* Tablet Layout */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 20px 50px;
+  }
+  header {
+    justify-content: space-between;
+    width: 620px;
+  }
+  .image-web {
+    width: 610px;
+  }
+  .item-info p {
+    width: 366px;
+  }
+
+  .nav {
+    visibility: visible;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Display as a single column */
+  }
+
+  .grid-container-2 {
+    grid-template-columns: 1fr; /* Display as a single column */
+  }
+
+  .item-2 {
+    margin-bottom: 30px;
+  }
+  .list {
+    width: 100%; /* Set the width to 100% */
+    display: flex; /* Change the display property to flex */
+    flex-direction: column; /* Display the list items as columns */
+    align-items: center; /* Center the items horizontally */
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .list li {
+    padding: 10px;
+    width: 100%; /* Set the width of list items to 100% */
+  }
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: black;
+    cursor: pointer;
+  }
+  .right-side-container {
+    width: 610px;
+  }
+  .menu-icon {
+    visibility: visible;
+  }
+}
+
+/* Tablet Layout */
+@media screen and (max-width: 660px) {
+  .menu-icon {
+    visibility: visible;
+  }
+}
+/* Mobile Layout */
+@media screen and (max-width: 480px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .image-web {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 300px;
+  }
+  .item-info {
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+  .item-info p {
+    width: 300px;
+    margin-top: 10px;
+  }
+  .list {
+    width: 100%; /* Adjust the width to fit the screen */
+    background-color: #1a1a1a;
+  }
+
+  .list li {
+    padding: 10px;
+    display: block; /* Display as a block element */
+    text-align: center;
+  }
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: black;
+    cursor: pointer;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .menu-icon {
+    visibility: visible;
+  }
+  .right-side-container {
+    width: 300px;
+  }
+}
